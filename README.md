@@ -372,37 +372,13 @@ python manage.py createsuperuser
 
 <hr>
 
-## 10. Google OAuth Setup
-1. Go to Google Cloud Console.
-2. Create a project →  <b>OAuth Consent Screen</b> →  configure.
-3. Create <b>OAuth 2.0 Client ID</b> (type = Web Application).
-   * <b>Authorized redirect URI:
-     ```ruby
-     http://localhost:8000/accounts/google/login/callback/
-     ```
-4. Copy the <b>Client ID</b> and <b>Client Secret</b>.
+## 15. So we can login with Google
 
-<hr>
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image25.png?raw=true)
 
-## 11. Add SocialApp in Django Admin
-Run migrations and create a superuser:
-```bash
-python manage.py migrate
-python manage.py createsuperuser
-```
-Run server:
-```bash
-python manage.py runserver
-```
-Go to: `http://127.0.0.1:8000/admin/`
-- Open <b>Social Applications</b> → Add New:
-  * Provider: <b>Google</b>
-  * Name: `Google`
-  * Client ID:(paste from Google)
-  * Secret Key:(paste from Google)
-  * Sites: check `example.com` (or `localhosts:8000`)
+<br>
+<br>
 
-<hr>
 
 
 
