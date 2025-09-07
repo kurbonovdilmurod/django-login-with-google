@@ -57,7 +57,9 @@ INSTALLED_APPS = [
 We start to enter Google Clod Console website
 
 Step - 1
-![image] (https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image.png?raw=true)
+<hr>
+![image](images_repository/image.png)
 
 
 
