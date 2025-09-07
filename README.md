@@ -62,10 +62,17 @@ We start to enter Google Clod Console website
 
 <br>
 
-  ## Step - 2
+  ## Step - 2 
+  We push the button "Select a project"
   
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image2.png?raw=true)
-![image]()
+
+<br>
+
+## Step - 3
+Create new project called “loginwithgoogle”
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image3.png?raw=true)
 
 
 
@@ -90,6 +97,7 @@ INSTALLED_APPS = [
 
     # Allauth apps                   
     #'django.contrib.sites',   ---> This code brings bugs, that's why don't use this
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
