@@ -1,4 +1,4 @@
-# django-login-with-google
+<img width="990" height="818" alt="image" src="https://github.com/user-attachments/assets/76a17d7a-f913-40dd-ae25-62c08f172422" /># django-login-with-google
 
 
 ## 1. Create a new folder
@@ -74,6 +74,30 @@ Create new project called “loginwithgoogle”
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image3.png?raw=true)
 
+<br>
+
+## Step - 4
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image4.png?raw=true)
+
+<br>
+
+## Step - 5
+Then we choose APIs & Services > Oauth consent screen.
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image5.png?raw=true)
+
+<br>
+
+## Step - 6
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image6.png?raw=true)
+
+<br>
+
+## Step - 7
+
+![image]()
 
 
 ## 7. myproject/settings.py
