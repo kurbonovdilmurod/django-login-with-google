@@ -326,6 +326,14 @@ TEMPLATES = [
 ## 12. <b>Template:</b> `templates/users/home.html`
 Create a folder `templates/users/` inside our "users" app and `home.html` file.
 ```django
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Login With Google</title>
+</head>
+<body>
 {% load socialaccount %}
 
 {% if user.is_authenticated %}
@@ -333,9 +341,10 @@ Create a folder `templates/users/` inside our "users" app and `home.html` file.
   <a href="{% url 'account_logout' %}">Logout</a>
 {% else %}
   <h2>Login</h2>
-  <a href="{% url 'account_login' %}">Email Login</a><br>
   <a href="{% provider_login_url 'google' %}?next=/">Login with Google</a>
 {% endif %}
+</body>
+</html>
 ```
 <hr>
 
