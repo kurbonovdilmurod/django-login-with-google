@@ -56,10 +56,13 @@ INSTALLED_APPS = [
 ## 6. Google Cloud Console
 We start to enter Google Clod Console website
 
-Step - 1
+  ## Step - 1
+  
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image.png?raw=true)
-<hr>
-![image](images_repository/image.png)
+
+<br>
+  ## Step - 2
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image2.png)
 
 
 
