@@ -355,7 +355,20 @@ python manage.py createsuperuser
 ```
 <hr>
 
+## Step - 1
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image22.png?raw=true)
+
+<br>
+
+## Step - 2
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image23.png?raw=true)
+
+<br>
+
+## Step - 3
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image24.png?raw=true)
+
+<br>
 
 <hr>
 
