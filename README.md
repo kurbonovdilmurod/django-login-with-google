@@ -1,4 +1,4 @@
-<img width="946" height="1005" alt="image" src="https://github.com/user-attachments/assets/bda864e2-a58b-48ea-85f1-2719f12ade32" /># django-login-with-google
+# django-login-with-google
 
 
 ## 1. Create a new folder
