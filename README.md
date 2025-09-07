@@ -4,8 +4,8 @@
 ## 1. Create a new folder
 ```bash
 cd Desktop
-mkdir project_login_email_google
-cd project_login_email_google
+mkdir django_login_with_google
+cd django_login_with_google
 ```
 <hr>
 
@@ -29,7 +29,7 @@ pip install django django-allauth requests PyJWT cryptography
 Create a new project and app:
 ```bash
 django-admin startproject myproject .
-python manage.py startapp accounts
+python manage.py startapp users
 ```
 <hr>
 
@@ -45,16 +45,60 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # Allauth apps
+
+    # My app
+    'users',
+    
+]
+```
+<hr>
+
+## 6. Google Cloud Console
+We start to enter Google Clod Console website
+
+
+
+
+
+## 7. myproject/settings.py
+```python
+
+SITE_ID=1      
+
+INSTALLED_APPS = [
+    # Django apps
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
     'django.contrib.sites',
+
+
+    # My app
+    'users',
+
+    # Allauth apps                   
+    #'django.contrib.sites',   ---> This code brings bugs, that's why don't use this
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
-    # My app
-    'accounts',
+    
 ]
+
+SOCIALACCOUNT_PROVIDERS = {                     
+    "google": {
+        "SCOPE": [
+            "profile",
+            "email"
+        ],
+        "AUTH_PARAMS": {"access_type": "online"}
+    }
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,6 +112,67 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',  # ← required by newer allauth
 ]
 
+....
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default
+    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth
+]
+
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+```
+<hr>
+
+
+
+## 8. myprofile/urls.py
+```python
+from django.contrib import admin
+from django.urls import path, include
+from accounts import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),  # Allauth URLs
+    path('', views.home, name='home'),
+]
+```
+<hr>
+
+## 9. users/views.py
+```python
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
+
+def home(request):
+    return render(request, "users/home.html")
+
+def logout_view(request):
+    logout(request)
+    return redirect("/")
+```
+
+<hr>
+
+## 10. users/urls.py
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("", views.home, name='home'),
+    path("logout", views.logout_view, name='logout_view'),
+]
+```
+<hr>
+
+## 11. myprofile/settings.py
+```python
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,97 +188,36 @@ TEMPLATES = [
         },
     },
 ]
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Default
-    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth
-]
-
-SITE_ID = 1
-SOCIALACCOUNT_PROVIDERS = {
-    "google": {
-        "SCOPE": [
-            "profile",
-            "email"
-        ],
-        "AUTH_PARAMS": {"access_type": "online"}
-    }
-}
-
-
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
-
-
-# Old (deprecated
-# ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_USERNAME_REQUIRED = False
-# ACCOUNT_AUTHENTICATION_METHOD = "email"
-# ACCOUNT_EMAIL_VERIFICATION = "none"
-
-# New style
-ACCOUNT_LOGIN_METHODS = {"email"}  # only allow login by email
-ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*"]  # required fields
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None  # disable username completely
-
 ```
 <hr>
 
-## 6. myprofile/urls.py
-```python
-from django.contrib import admin
-from django.urls import path, include
-from accounts import views
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),  # Allauth URLs
-    path('', views.home, name='home'),
-]
-```
-<hr>
-
-## 7. accounts/views.py
-```python
-from django.shortcuts import render, redirect
-from django.contrib.auth import logout
-
-def home(request):
-    return render(request, "home.html")
-
-def logout_view(request):
-    logout(request)
-    return redirect("/")
-```
-
-<hr>
-
-## 8. accounts/urls.py
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path("", views.home, name='home'),
-    path("logout", views.logout_view, name='logout_view'),
-]
-```
-<hr>
-
-## 9. <b>Template:</b> `templates/home.html`
-Create a folder `templates/` inside our project and `home.html`.
+## 12. <b>Template:</b> `templates/users/home.html`
+Create a folder `templates/users/` inside our project and `home.html`.
 ```django
 {% load socialaccount %}
 
 {% if user.is_authenticated %}
   <h2>Welcome, {{ user.email }}</h2>
-  <a href="{% url 'logout' %}">Logout</a>
+  <a href="{% url 'account_logout' %}">Logout</a>
 {% else %}
   <h2>Login</h2>
   <a href="{% url 'account_login' %}">Email Login</a><br>
   <a href="{% provider_login_url 'google' %}?next=/">Login with Google</a>
 {% endif %}
 ```
+<hr>
+
+## 13. Run Migrations
+Run migrations:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+```
+<hr>
+
+## 14. Create Admin
+
 <hr>
 
 ## 10. Google OAuth Setup
