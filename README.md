@@ -58,7 +58,7 @@ We start to enter Google Clod Console website
 
   ## Step - 1
   
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image01.png?raw=true)
 
 <br>
 
@@ -72,44 +72,44 @@ We start to enter Google Clod Console website
 ## Step - 3
 Create new project called “loginwithgoogle”
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image3.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image03.png?raw=true)
 
 <br>
 
 ## Step - 4
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image4.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image04.png?raw=true)
 
 <br>
 
 ## Step - 5
 Then we choose APIs & Services > Oauth consent screen.
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image5.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image05.png?raw=true)
 
 <br>
 
 ## Step - 6
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image6.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image06.png?raw=true)
 
 <br>
 
 ## Step - 7
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image7.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image07.png?raw=true)
 
 <br>
 
 ## Step - 8
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image8.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image08.png?raw=true)
 
 <br>
 
 ## Step - 9
 
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image9.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image09.png?raw=true)
 
 <br>
 
