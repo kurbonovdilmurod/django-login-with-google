@@ -323,7 +323,7 @@ TEMPLATES = [
 <hr>
 
 ## 12. <b>Template:</b> `templates/users/home.html`
-Create a folder `templates/users/` inside our project and `home.html`.
+Create a folder `templates/users/` inside our "users" app and `home.html` file.
 ```django
 {% load socialaccount %}
 
