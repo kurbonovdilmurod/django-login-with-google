@@ -62,7 +62,7 @@ We start to enter Google Clod Console website
 
 <br>
   ## Step - 2
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image2.png)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image2.png?raw=true)
 
 
 
