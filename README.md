@@ -344,11 +344,18 @@ Run migrations:
 ```bash
 python manage.py makemigrations
 python manage.py migrate
-python manage.py createsuperuser
 ```
 <hr>
 
 ## 14. Create Admin
+
+Create a superuser
+```bash
+python manage.py createsuperuser
+```
+<hr>
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image22.png?raw=true)
 
 <hr>
 
