@@ -65,7 +65,7 @@ We start to enter Google Clod Console website
   ## Step - 2 
   We push the button "Select a project"
   
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image2.png?raw=true)
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image02.png?raw=true)
 
 <br>
 
