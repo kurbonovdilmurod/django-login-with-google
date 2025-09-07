@@ -1,4 +1,4 @@
-# login-with-google
+# django-login-with-google
 
 
 ## 1. Create a new folder
