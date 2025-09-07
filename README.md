@@ -1,4 +1,4 @@
-# django-login-with-google
+<img width="946" height="1005" alt="image" src="https://github.com/user-attachments/assets/bda864e2-a58b-48ea-85f1-2719f12ade32" /># django-login-with-google
 
 
 ## 1. Create a new folder
@@ -98,6 +98,96 @@ Then we choose APIs & Services > Oauth consent screen.
 ## Step - 7
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image7.png?raw=true)
+
+<br>
+
+## Step - 8
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image8.png?raw=true)
+
+<br>
+
+## Step - 9
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image9.png?raw=true)
+
+<br>
+
+## Step - 10
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image10.png?raw=true)
+
+<br>
+
+## Step - 11
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image11.png?raw=true)
+
+<br>
+
+## Step - 12
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image12.png?raw=true)
+
+<br>
+
+## Step - 13
+Then we choose Data Access > Add or remove scopes
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image13.png?raw=true)
+
+<br>
+
+## Step - 14
+Save all things
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image14.png?raw=true)
+
+<br>
+
+## Step - 15
+We choose “Create client”
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image15.png?raw=true)
+
+<br>
+
+## Step - 16
+We choose “Web application”
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image16.png?raw=true)
+
+<br>
+
+## Step - 17
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image17.png?raw=true)
+
+<br>
+
+## Step - 18
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image18.png?raw=true)
+
+<br>
+
+## Step - 19
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image19.png?raw=true)
+
+<br>
+
+## Step - 20
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image20.png?raw=true)
+
+<br>
+
+## Step - 21
+
+![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image21.png?raw=true)
+
+<br>
 
 
 ## 7. myproject/settings.py
