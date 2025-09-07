@@ -178,6 +178,7 @@ We choose “Web application”
 <br>
 
 ## Step - 20
+We need to download JSON file
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image20.png?raw=true)
 
