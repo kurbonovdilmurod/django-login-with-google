@@ -211,8 +211,7 @@ INSTALLED_APPS = [
     'users',
 
     # Allauth apps                   
-    #'django.contrib.sites',   ---> This code brings bugs, that's why don't use this
-
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
