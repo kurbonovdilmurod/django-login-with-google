@@ -70,7 +70,7 @@ INSTALLED_APPS = [
 <br>
 
 ## Step - 3
-Create new project called “loginwithgoogle”
+Create a new project called “loginwithgoogle”
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image03.png?raw=true)
 
@@ -83,7 +83,7 @@ Create new project called “loginwithgoogle”
 <br>
 
 ## Step - 5
-Then we choose APIs & Services > Oauth consent screen.
+Then choose APIs & Services > Oauth consent screen.
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image05.png?raw=true)
 
