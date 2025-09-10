@@ -132,7 +132,7 @@ Then choose APIs & Services > Oauth consent screen.
 <br>
 
 ## Step - 13
-Then we choose Data Access > Add or remove scopes
+Then choose Data Access > Add or remove scopes
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image13.png?raw=true)
 
