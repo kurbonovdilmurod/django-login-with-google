@@ -146,7 +146,7 @@ Save all things
 <br>
 
 ## Step - 15
-We choose “Create client”
+Choose “Create client”
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image15.png?raw=true)
 
