@@ -153,7 +153,7 @@ Choose “Create client”
 <br>
 
 ## Step - 16
-We choose “Web application”
+Choose “Web application”
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image16.png?raw=true)
 
