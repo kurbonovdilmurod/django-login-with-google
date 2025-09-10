@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 <hr>
 
 ## 6. Google Cloud Console
-We start to enter Google Clod Console website
+ Start to enter Google Cloud Console website
 
   ## Step - 1
   
@@ -63,7 +63,7 @@ We start to enter Google Clod Console website
 <br>
 
   ## Step - 2 
-  We push the button "Select a project"
+  Push the button "Select a project"
   
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image02.png?raw=true)
 
