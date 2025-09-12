@@ -211,7 +211,6 @@ INSTALLED_APPS = [
     'users',
 
     # Allauth apps                   
-    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
