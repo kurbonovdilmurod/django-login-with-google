@@ -273,7 +273,7 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 ```
 <hr>
 
-## 8. myprofile/urls.py
+## 8. myproject/urls.py
 ```python
 from django.contrib import admin
 from django.urls import path, include
@@ -298,7 +298,7 @@ pip install django-environ
 ```
 <hr>
 
-## 11. myprofile/settings
+## 11. myproject/settings
 
 ```python
 from pathlib import Path
@@ -311,7 +311,7 @@ env.read_env()
 ```
 <hr>
 
-## 12. Create .env file in the myprofile --- myprofile/.env
+## 12. Create .env file in the myproject --- myproject/.env
 ```python
     OAUTH_GOOGLE_CLIENT_ID=414286277036-84iv7p7p6968kerq1efbsec0kfhr36gd.apps.googleusercontent.com
     OAUTH_GOOGLE_SECRET=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
@@ -319,7 +319,7 @@ env.read_env()
 
 <hr>
 
-## 13. myprofile/settings.py
+## 13. myproject/settings.py
 ```python
 ...
 
@@ -345,7 +345,7 @@ SOCIALACCOUNT_PROVIDERS = {
 
 
 
-## 14. myprofile/urls.py
+## 14. myproject/urls.py
 ```python
 from django.contrib import admin
 from django.urls import path, include
@@ -386,7 +386,7 @@ urlpatterns = [
 ```
 <hr>
 
-## 17. myprofile/settings.py
+## 17. myproject/settings.py
 ```python
 TEMPLATES = [
     {
