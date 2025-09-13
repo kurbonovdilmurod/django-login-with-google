@@ -230,7 +230,12 @@ SOCIALACCOUNT_PROVIDERS = {
             "profile",
             "email"
         ],
-        "AUTH_PARAMS": {"access_type": "online"}
+        "AUTH_PARAMS": {"access_type": "online"},
+        'APP': {
+            'client_id': '123',
+            'secret': '456',
+            'key': ''
+        }
     }
 }
 
