@@ -270,7 +270,11 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 ```
 <hr>
 
-
+## 8. Install django-environ
+```python
+pip install django-environ
+```
+<hr>
 
 ## 8. myprofile/urls.py
 ```python
