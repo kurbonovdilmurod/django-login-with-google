@@ -19,9 +19,12 @@ source .venv/bin/activate
 ```
 <hr>
 
-## 3. Installation django, django-allauth, requests, PyJWT, cryptography
+## 3. Installation django and django-allauth
 ```bash
-pip install django django-allauth requests PyJWT cryptography
+pip install django
+```
+```bash
+pip install "django-allauth[socialaccount]"
 ```
 <hr>
 
