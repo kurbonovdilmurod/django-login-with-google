@@ -195,9 +195,7 @@ Download JSON file
 
 
 ## 7. myproject/settings.py
-```python
-
-SITE_ID=1      
+```python    
 
 INSTALLED_APPS = [
     # Django apps
@@ -222,7 +220,7 @@ INSTALLED_APPS = [
     
 ]
 
-SITE_ID=1   
+  
 
 SOCIALACCOUNT_PROVIDERS = {                     
     "google": {
@@ -230,7 +228,10 @@ SOCIALACCOUNT_PROVIDERS = {
             "profile",
             "email"
         ],
-        "AUTH_PARAMS": {"access_type": "online"},
+        "AUTH_PARAMS": {
+            "access_type": "online",
+            "prompt": 'consent'
+        },
         'APP': {
             'client_id': '123',
             'secret': '456',
@@ -238,6 +239,8 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+SITE_ID=1 
 
 
 MIDDLEWARE = [
@@ -270,13 +273,79 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 ```
 <hr>
 
-## 8. Install django-environ
+## 8. myprofile/urls.py
 ```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),  # Allauth URLs
+```
+<hr>
+
+## 9. Run Migrations
+Run migrations:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+<hr>
+
+## 10. Install django-environ
+```bash
 pip install django-environ
 ```
 <hr>
 
-## 8. myprofile/urls.py
+## 11. myprofile/settings
+
+```python
+from pathlib import Path
+
+# django-environ
+from environ import Env   
+env = Env()
+env.read_env()
+...
+```
+<hr>
+
+## 12. Create .env file in the myprofile --- myprofile/.env
+```python
+    OAUTH_GOOGLE_CLIENT_ID=414286277036-84iv7p7p6968kerq1efbsec0kfhr36gd.apps.googleusercontent.com
+    OAUTH_GOOGLE_SECRET=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
+```
+
+<hr>
+
+## 13. myprofile/settings.py
+```python
+...
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "SCOPE": [
+            "profile",
+            "email"
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+            "prompt": 'consent'
+        },
+        'APP': {
+            'client_id': env('OAUTH_GOOGLE_CLIENT_ID'),
+            'secret': env('OAUTH_GOOGLE_SECRET'),
+            'key': ''
+        }
+    }
+}
+...
+```
+
+
+
+## 14. myprofile/urls.py
 ```python
 from django.contrib import admin
 from django.urls import path, include
@@ -290,7 +359,7 @@ urlpatterns = [
 ```
 <hr>
 
-## 9. users/views.py
+## 15. users/views.py
 ```python
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
@@ -305,7 +374,7 @@ def logout_view(request):
 
 <hr>
 
-## 10. users/urls.py
+## 16. users/urls.py
 ```python
 from django.urls import path
 from . import views
@@ -317,7 +386,7 @@ urlpatterns = [
 ```
 <hr>
 
-## 11. myprofile/settings.py
+## 17. myprofile/settings.py
 ```python
 TEMPLATES = [
     {
@@ -337,7 +406,7 @@ TEMPLATES = [
 ```
 <hr>
 
-## 12. <b>Template:</b> `templates/users/home.html`
+## 18. <b>Template:</b> `templates/users/home.html`
 Create a folder `templates/users/` inside our "users" app and `home.html` file.
 ```django
 <!DOCTYPE html>
@@ -362,7 +431,7 @@ Create a folder `templates/users/` inside our "users" app and `home.html` file.
 ```
 <hr>
 
-## 13. Run Migrations
+## 19. Run Migrations
 Run migrations:
 ```bash
 python manage.py makemigrations
@@ -370,7 +439,7 @@ python manage.py migrate
 ```
 <hr>
 
-## 14. Create Admin
+## 20. Create Admin
 
 Create a superuser
 ```bash
@@ -395,7 +464,7 @@ python manage.py createsuperuser
 
 <hr>
 
-## 15. So we can login with Google
+## 21. So we can login with Google
 
 ![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image25.png?raw=true)
 
