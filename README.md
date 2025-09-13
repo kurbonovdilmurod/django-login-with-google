@@ -264,7 +264,7 @@ LOGOUT_REDIRECT_URL = '/'
 ```python
 from django.contrib import admin
 from django.urls import path, include
-from accounts import views
+from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
