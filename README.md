@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 
 
     # My app
-    'users',
+    'users',      # new
     
 ]
 ```
@@ -211,7 +211,7 @@ INSTALLED_APPS = [
     # My app
     'users',
 
-    # Allauth apps                   
+    # Allauth apps     # new              
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -222,7 +222,7 @@ INSTALLED_APPS = [
 
   
 
-SOCIALACCOUNT_PROVIDERS = {                     
+SOCIALACCOUNT_PROVIDERS = {      # new               
     "google": {
         "SCOPE": [
             "profile",
@@ -240,7 +240,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-SITE_ID=1 
+SITE_ID=1    # new
 
 
 MIDDLEWARE = [
@@ -252,27 +252,27 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'allauth.account.middleware.AccountMiddleware',  # ← required by newer allauth
+    'allauth.account.middleware.AccountMiddleware',  # ← required by newer allauth   # new
 ]
 
 ....
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTHENTICATION_BACKENDS = [
+AUTHENTICATION_BACKENDS = [     # new
 
      # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',  # Default
+    'django.contrib.auth.backends.ModelBackend',  # Default    
 
      # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',  # Allauth
 ]
 
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'    # new
+LOGOUT_REDIRECT_URL = '/'   # new
 
-SOCIALACCOUNT_LOGIN_ON_GET = True
+SOCIALACCOUNT_LOGIN_ON_GET = True     # new
 
 ```
 <hr>
@@ -280,11 +280,11 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 ## 8. myproject/urls.py
 ```python
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include  #new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),  # Allauth URLs
+    path('accounts/', include('allauth.urls')),  # Allauth URLs   # new
 ```
 <hr>
 
@@ -307,7 +307,7 @@ pip install django-environ
 ```python
 from pathlib import Path
 
-# django-environ
+# django-environ    # new
 from environ import Env   
 env = Env()
 env.read_env()
@@ -338,8 +338,8 @@ SOCIALACCOUNT_PROVIDERS = {
             "prompt": 'consent'
         },
         'APP': {
-            'client_id': env('OAUTH_GOOGLE_CLIENT_ID'),
-            'secret': env('OAUTH_GOOGLE_SECRET'),
+            'client_id': env('OAUTH_GOOGLE_CLIENT_ID'),  # new
+            'secret': env('OAUTH_GOOGLE_SECRET'),   # new
             'key': ''
         }
     }
@@ -353,12 +353,12 @@ SOCIALACCOUNT_PROVIDERS = {
 ```python
 from django.contrib import admin
 from django.urls import path, include
-from users import views
+from users import views    # new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # Allauth URLs
-    path('', views.home, name='home'),
+    path('', views.home, name='home'),   # new
 ]
 ```
 <hr>
@@ -395,7 +395,7 @@ urlpatterns = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],   # new
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
