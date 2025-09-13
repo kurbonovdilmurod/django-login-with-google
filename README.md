@@ -313,8 +313,8 @@ env.read_env()
 
 ## 12. Create .env file in the myproject --- myproject/.env
 ```python
-    OAUTH_GOOGLE_CLIENT_ID=414286277036-84iv7p7p6968kerq1efbsec0kfhr36gd.apps.googleusercontent.com
-    OAUTH_GOOGLE_SECRET=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
+OAUTH_GOOGLE_CLIENT_ID=414286277036-84iv7p7p6968kerq1efbsec0kfhr36gd.apps.googleusercontent.com
+OAUTH_GOOGLE_SECRET=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
 ```
 
 <hr>
