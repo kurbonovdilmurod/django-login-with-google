@@ -457,11 +457,6 @@ python manage.py createsuperuser
 
 <br>
 
-## Step - 3
-![image](https://github.com/kurbonovdilmurod/django-login-with-google/blob/main/images_repository/image24.png?raw=true)
-
-<br>
-
 <hr>
 
 ## 21. So we can login with Google
