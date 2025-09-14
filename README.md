@@ -9,7 +9,7 @@ cd django_login_with_google
 ```
 <hr>
 
-## 2. Install environment
+## 2. Install an environment
 ```bash
 python3 -m venv .venv
 # or
