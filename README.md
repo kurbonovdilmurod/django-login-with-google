@@ -19,7 +19,7 @@ source .venv/bin/activate
 ```
 <hr>
 
-## 3. Installation django and django-allauth
+## 3. Install django and django-allauth
 ```bash
 pip install django
 ```
